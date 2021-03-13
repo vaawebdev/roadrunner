@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         docker-compose: ["1.27.4", "1.9.0"]
-        php: ['8.0']
+        php: ["7.4", "8.0"]
     name: Docker Compose v${{ matrix.docker-compose }}
     steps:
       - uses: actions/checkout@master
@@ -25,7 +25,7 @@ jobs:
       - name: Initialize
         run: |
           composer install
-          composer init-config
+          cp .env.example .env
 
       - name: Build
         run: ./docker-compose up -d
