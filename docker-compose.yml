@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  roadrunner:
+    build: ./containers/roadrunner
+    container_name: "roadrunner"
+    ports:
+      - ${APP_PORT}:8080
+    volumes:
+      - ./:/var/www/app:cached
+      - ./etc/roadrunner:/etc/roadrunner:cached
