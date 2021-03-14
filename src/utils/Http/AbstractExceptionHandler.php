@@ -1,6 +1,6 @@
 <?php
 
-namespace Infrastructure\Http;
+namespace Utils\Http;
 
 use Closure;
 use Throwable;

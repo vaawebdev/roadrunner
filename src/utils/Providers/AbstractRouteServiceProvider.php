@@ -1,6 +1,6 @@
 <?php
 
-namespace Infrastructure\Providers;
+namespace Utils\Providers;
 
 use League\Route\Router;
 use League\Container\ServiceProvider\AbstractServiceProvider;
@@ -26,7 +26,7 @@ abstract class AbstractRouteServiceProvider extends AbstractServiceProvider impl
     /**
      * @inheritDoc
      */
-    public function register()
+    final public function register()
     {
         //
     }

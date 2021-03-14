@@ -38,8 +38,7 @@ $exceptionHandler = $container->get(AbstractExceptionHandler::class)->getHandler
 
 while ($req = $psr7->acceptRequest()) {
     try {
-        $response = $router->dispatch($req);
-        $psr7->respond($response);
+        $psr7->respond($router->dispatch($req));
     } catch (Throwable $e) {
         $psr7->respond($exceptionHandler($e));
     }

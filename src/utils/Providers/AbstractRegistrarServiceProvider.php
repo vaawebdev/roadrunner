@@ -1,6 +1,6 @@
 <?php
 
-namespace Infrastructure\Providers;
+namespace Utils\Providers;
 
 use League\Container\Container;
 use League\Container\ServiceProvider\AbstractServiceProvider;

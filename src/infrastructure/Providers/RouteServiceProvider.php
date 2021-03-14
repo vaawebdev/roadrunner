@@ -6,7 +6,7 @@ use League\Route\Router;
 use League\Container\Container;
 use Infrastructure\Http\ResponseFactory;
 use League\Route\Strategy\ApplicationStrategy;
-use Infrastructure\Http\Contracts\ResponseFactoryInterface;
+use Utils\Http\Contracts\ResponseFactoryInterface;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 
 class RouteServiceProvider extends AbstractServiceProvider

@@ -4,19 +4,19 @@ namespace App\Http;
 
 use Throwable;
 use Psr\Http\Message\ResponseInterface;
-use Infrastructure\Http\AbstractExceptionHandler;
+use Utils\Http\AbstractExceptionHandler;
 use League\Route\Http\Exception\NotFoundException;
-use Infrastructure\Http\Contracts\ResponseFactoryInterface;
+use Utils\Http\Contracts\ResponseFactoryInterface;
 
 class ExceptionHandler extends AbstractExceptionHandler
 {
     /**
-     * @var \Infrastructure\Http\Contracts\ResponseFactoryInterface
+     * @var \Utils\Http\Contracts\ResponseFactoryInterface
      */
     private ResponseFactoryInterface $factory;
 
     /**
-     * @param  \Infrastructure\Http\Contracts\ResponseFactoryInterface $factory
+     * @param  \Utils\Http\Contracts\ResponseFactoryInterface $factory
      * @return void
      */
     public function __construct(ResponseFactoryInterface $factory)

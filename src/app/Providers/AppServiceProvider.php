@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Infrastructure\Providers\AbstractRegistrarServiceProvider;
+use Utils\Providers\AbstractRegistrarServiceProvider;
 
 class AppServiceProvider extends AbstractRegistrarServiceProvider
 {

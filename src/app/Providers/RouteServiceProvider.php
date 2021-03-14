@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use League\Route\Router;
 use App\Http\Controllers\HomeController;
-use Infrastructure\Providers\AbstractRouteServiceProvider;
+use Utils\Providers\AbstractRouteServiceProvider;
 
 class RouteServiceProvider extends AbstractRouteServiceProvider
 {

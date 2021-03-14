@@ -1,6 +1,6 @@
 <?php
 
-namespace Infrastructure\Http\Contracts;
+namespace Utils\Http\Contracts;
 
 interface JsonableInterface
 {

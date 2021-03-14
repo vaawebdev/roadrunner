@@ -2,6 +2,8 @@
 
 namespace Infrastructure\Providers;
 
+use Utils\Providers\AbstractRegistrarServiceProvider;
+
 class InfrastructureServiceProvider extends AbstractRegistrarServiceProvider
 {
     /**

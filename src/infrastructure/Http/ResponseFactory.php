@@ -4,8 +4,8 @@ namespace Infrastructure\Http;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
-use Infrastructure\Http\Contracts\JsonableInterface;
-use Infrastructure\Http\Contracts\ResponseFactoryInterface;
+use Utils\Http\Contracts\JsonableInterface;
+use Utils\Http\Contracts\ResponseFactoryInterface;
 
 class ResponseFactory implements ResponseFactoryInterface
 {
