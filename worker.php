@@ -6,6 +6,7 @@ use League\Route\Router;
 use Spiral\RoadRunner\PSR7Client;
 use App\Providers\AppServiceProvider;
 use Infrastructure\Http\AbstractExceptionHandler;
+use Infrastructure\Providers\InfrastructureServiceProvider;
 
 ini_set('display_errors', 'stderr');
 
@@ -16,7 +17,9 @@ include 'vendor/autoload.php';
  */
 $container = require 'src/infrastructure/container.php';
 
-$container->addServiceProvider(AppServiceProvider::class);
+$container
+    ->addServiceProvider(InfrastructureServiceProvider::class)
+    ->addServiceProvider(AppServiceProvider::class);
 
 /**
  * @var \Spiral\RoadRunner\PSR7Client

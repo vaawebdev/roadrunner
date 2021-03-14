@@ -2,38 +2,18 @@
 
 namespace App\Providers;
 
-use League\Container\Container;
-use League\Container\ServiceProvider\AbstractServiceProvider;
-use League\Container\ServiceProvider\BootableServiceProviderInterface;
+use Infrastructure\Providers\AbstractRegistrarServiceProvider;
 
-class AppServiceProvider extends AbstractServiceProvider implements BootableServiceProviderInterface
+class AppServiceProvider extends AbstractRegistrarServiceProvider
 {
     /**
-     * @var array
-     */
-    private $providers = [
-        RouteServiceProvider::class,
-    ];
-
-    /**
      * @inheritDoc
      */
-    public function boot()
+    protected function getServiceProviders(): array
     {
-        $container = $this->getContainer();
-
-        if ($container instanceof Container) {
-            foreach ($this->providers as $provider) {
-                $container->addServiceProvider($provider);
-            }
-        }
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function register()
-    {
-        //
+        return [
+            ExceptionHandlerServiceProvider::class,
+            RouteServiceProvider::class,
+        ];
     }
 }
